@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-bg': "url('./assets/Homepage.jpg')",
+        'footer-texture': "url('./assets/images/footer-texture.png')",
+      },
+      },
   },
   plugins: [],
 }
