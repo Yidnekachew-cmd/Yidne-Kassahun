@@ -35,13 +35,13 @@ const Home = ({
           </div>
           <div className="flex flex-1 flex-col items-center justify-center mt-4  lg:items-start">
             <div className=" text-center mb-3  lg:space-y-1 lg:mb-8 lg:text-left xl:space-y-2 xl:mb-10">
-              <p className=" text-md lg:text-lg xl:text-2xl font-bold text-[#A5ACB5] ">
+              <p className=" text-md lg:text-lg xl:text-2xl font-bold text-[#869199] ">
                 Hello, I&apos;m
               </p>
-              <h1 className="text-2xl lg:text-3xl xl:text-4xl text-center font-bold ">
+              <h1 className="text-2xl lg:text-3xl xl:text-4xl text-center font-bold text-[#3c4a4e] ">
                 Yidne Kassahun
               </h1>
-              <p className="text-md lg:text-lg xl:text-2xl font-bold text-[#A5ACB5] ">
+              <p className="text-md lg:text-lg xl:text-2xl font-bold text-[#869199] ">
                 Frontend Developer
               </p>
             </div>
@@ -63,13 +63,13 @@ const Home = ({
               <img
                 src={linkedin}
                 alt="My LinkedIn profile"
-                className="h-7 xl:h-9 animate-pulse"
+                className="h-7 xl:h-9 animate-pulse text-[#3c4a4e] "
                 onClick={handleLinkedinIconClick}
               />
               <img
                 src={github}
                 alt="My GitHub profile"
-                className="h-7 xl:h-9 animate-pulse"
+                className="h-7 xl:h-9 animate-pulse text-[#3c4a4e]"
                 onClick={handleGitHubIconClick}
               />
             </div>

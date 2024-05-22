@@ -10,11 +10,11 @@ const Footer = () => {
         <div className="flex justify-start  flex-1  ">
           <img src={yidneLogo} alt="Yidne Logo" className="w-28 lg:w-36" />
         </div>
-        <ul className="hidden md:flex justify-center items-center flex-1 text-[#a5a5aa] gap-4">
+        <ul className="hidden md:flex justify-center items-center flex-1 gap-4">
           <li>
             <Link
               to="/"
-              className={`${
+              className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                 location.pathname === "/" ? "border-b-2 border-[#2d718b]" : ""
               }`}
             >
@@ -24,7 +24,7 @@ const Footer = () => {
           <li>
             <Link
               to="/About"
-              className={`${
+              className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                 location.pathname === "/About"
                   ? "border-b-2 border-[#2d718b]"
                   : ""
@@ -36,7 +36,7 @@ const Footer = () => {
           <li>
             <Link
               to="/Experience"
-              className={`${
+              className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                 location.pathname === "/Experience"
                   ? "border-b-2 border-[#2d718b] "
                   : ""
@@ -48,7 +48,7 @@ const Footer = () => {
           <li>
             <Link
               to="/Projects"
-              className={`${
+              className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                 location.pathname === "/Projects"
                   ? "border-b-2 border-[#2d718b]"
                   : ""
@@ -60,7 +60,7 @@ const Footer = () => {
           <li>
             <Link
               to="/Contact"
-              className={`${
+              className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                 location.pathname === "/Contact"
                   ? "border-b-2 border-[#2d718b]"
                   : ""
@@ -70,7 +70,7 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
-        <div className="flex flex-1 jusify-center md:justify-end items-start text-xs md:text-sm -mt-6 md:mt-0 ">
+        <div className="flex flex-1 jusify-center md:justify-end items-start text-xs md:text-sm -mt-6 md:mt-0 md:mr-8 ">
           <p className="text-[#b4bdc2] ">Copyright &#169; 2024.</p>
         </div>
       </div>

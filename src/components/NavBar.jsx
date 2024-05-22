@@ -132,12 +132,12 @@ const NavBar = () => {
         </div>
         {toggleMenu && (
           <div className=" md:hidden">
-            <ul className="flex flex-col justify-center items-center flex-1 text-[#a5a5aa] gap-4 text-md slide-bottom">
+            <ul className="flex flex-col justify-center items-center flex-1 gap-4 text-md slide-bottom">
               <li>
                 <Link
                   to="/"
                   onClick={closeMenu}
-                  className={`${
+                  className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                     location.pathname === "/"
                       ? "border-b-2 border-[#2d718b]"
                       : ""
@@ -150,7 +150,7 @@ const NavBar = () => {
                 <Link
                   to="/About"
                   onClick={closeMenu}
-                  className={`${
+                  className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                     location.pathname === "/About"
                       ? "border-b-2 border-[#2d718b]"
                       : ""
@@ -163,7 +163,7 @@ const NavBar = () => {
                 <Link
                   to="/Experience"
                   onClick={closeMenu}
-                  className={`${
+                  className={`hover:text-[#cfcab9] text-[#a5a5aa] ${
                     location.pathname === "/Experience"
                       ? "border-b-2 border-[#2d718b] "
                       : ""
@@ -176,7 +176,7 @@ const NavBar = () => {
                 <Link
                   to="/Projects"
                   onClick={closeMenu}
-                  className={`${
+                  className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                     location.pathname === "/Projects"
                       ? "border-b-2 border-[#2d718b]"
                       : ""
@@ -189,7 +189,7 @@ const NavBar = () => {
                 <Link
                   to="/Contact"
                   onClick={closeMenu}
-                  className={`${
+                  className={`hover:text-[#cfcab9] text-[#a5a5aa] ${
                     location.pathname === "/Contact"
                       ? "border-b-2 border-[#2d718b]"
                       : ""
@@ -206,11 +206,11 @@ const NavBar = () => {
         <div className="flex justify-start  flex-1 w-[20%] pl-12">
           <img src={yidneLogo} alt="Yidne Logo" className="w-28" />
         </div>
-        <ul className="flex justify-center items-center flex-1 text-[#a5a5aa] gap-4">
+        <ul className="flex justify-center items-center flex-1  gap-4">
           <li>
             <Link
               to="/"
-              className={`${
+              className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                 location.pathname === "/" ? "border-b-2 border-[#2d718b]" : ""
               }`}
             >
@@ -220,7 +220,7 @@ const NavBar = () => {
           <li>
             <Link
               to="/About"
-              className={`${
+              className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                 location.pathname === "/About"
                   ? "border-b-2 border-[#2d718b]"
                   : ""
@@ -232,7 +232,7 @@ const NavBar = () => {
           <li>
             <Link
               to="/Experience"
-              className={`${
+              className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                 location.pathname === "/Experience"
                   ? "border-b-2 border-[#2d718b] "
                   : ""
@@ -244,7 +244,7 @@ const NavBar = () => {
           <li>
             <Link
               to="/Projects"
-              className={`${
+              className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
                 location.pathname === "/Projects"
                   ? "border-b-2 border-[#2d718b]"
                   : ""
