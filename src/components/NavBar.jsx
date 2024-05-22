@@ -104,8 +104,12 @@ const NavBar = () => {
     //     </ul>
     //   </nav>
     // </div>
-    <nav className={` gradient_bg w-full ${toggleMenu ? "h-[100vh]" : ""} `}>
-      <div className="block md:hidden w-[100%]">
+    <nav
+      className={` gradient_bg w-full ${
+        toggleMenu ? "h-[100vh] fixed top-0 bottom-0 z-30 " : ""
+      } `}
+    >
+      <div className="block md:hidden w-[100%] ">
         <div className="flex justify-between items-center">
           <div className="flex justify-start items-center flex-1  ">
             <img src={yidneLogo} alt="Yidne Logo" className="w-24" />
@@ -128,7 +132,7 @@ const NavBar = () => {
         </div>
         {toggleMenu && (
           <div className=" md:hidden">
-            <ul className="flex flex-col justify-center items-center flex-1 text-[#a5a5aa] gap-4 text-md">
+            <ul className="flex flex-col justify-center items-center flex-1 text-[#a5a5aa] gap-4 text-md slide-bottom">
               <li>
                 <Link
                   to="/"
