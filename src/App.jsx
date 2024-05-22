@@ -40,26 +40,22 @@ function App() {
   };
 
   const handleClickMathGitHub = () => {
-    
-    const math = 'https://github.com/Yidnekachew-cmd/math-magician';
-    window.open(math, '_blank');
+    const math = "https://github.com/Yidnekachew-cmd/GPT-3";
+    window.open(math, "_blank");
   };
   const handleClickPopGitHub = () => {
-    
-    const pop = 'https://github.com/Yidnekachew-cmd/Popuation-Index';
-    window.open(pop, '_blank');
+    const pop = "https://github.com/Yidnekachew-cmd/Popuation-Index";
+    window.open(pop, "_blank");
   };
-
   // const handleClickTodoGitHub = () => {
-    
+
   //   const todo = 'https://github.com/Yidnekachew-cmd/math-magician';
   //   window.open(todo, '_blank');
   // };
 
   const handleClickMathLive = () => {
-    
-    const mathLive = 'https://math-magician-yidnekachew-cmd.onrender.com/';
-    window.open(mathLive, '_blank');
+    const mathLive = "https://gpt-3-wnao.onrender.com/";
+    window.open(mathLive, "_blank");
   };
   const handleClickPopLive = () => {
     

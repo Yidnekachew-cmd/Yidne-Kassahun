@@ -22,6 +22,11 @@
   );
 }
 
+.gradient_bg-3 {
+  /* global 92%+ browsers support */
+  background: radial-gradient(circle at 3% 25%, rgba(231, 232, 229, 1) 0%, rgba(41, 123, 119, 1) 100%);
+}
+
 .gradient_text {
   color: radial-gradient(
     circle at 3% 25%,

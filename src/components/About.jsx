@@ -15,6 +15,7 @@ const About = () => {
           <h1 className="text-xl lg:text-2xl xl:text-3xl  font-bold text-[#3c4a4e]">
             About Me
           </h1>
+          <div className="border-b-[#456c75] border-4 w-10 mx-auto mt-4" />
         </div>
         <div className="flex flex-col md:flex-row lg:flex-row-reverse  justify-center items-center md:items-start w-full mt-6 md:gap-8 md:mt-8 lg:mt-10">
           <div className="flex flex-col-reverse items-center flex-1">
