@@ -7,7 +7,7 @@ import educationPic from '../assets/education.png'
 const About = () => {
   return (
     <div className="w-full bg-gray-200">
-      <div className="flex flex-col justify-center items-center  w-[90%] mx-auto  h-auto py-10 lg:py-12 lg:w-[80%]">
+      <div className="flex flex-col justify-center items-center  w-[90%] mx-auto  h-auto py-10 lg:py-20 lg:w-[80%]">
         <div className="text-center">
           <p className="text-sm lg:text-lg xl:text-xl text-[#456c75]">
             Get To Know More
@@ -15,9 +15,9 @@ const About = () => {
           <h1 className="text-xl lg:text-2xl xl:text-3xl  font-bold text-[#3c4a4e]">
             About Me
           </h1>
-          <div className="border-b-[#456c75] border-4 w-10 mx-auto mt-4" />
+          <div className="border-b-[#456c75] border-4 w-10 mx-auto mt-4 lg:mt-6" />
         </div>
-        <div className="flex flex-col md:flex-row lg:flex-row-reverse  justify-center items-center md:items-start w-full mt-6 md:gap-8 md:mt-8 lg:mt-10">
+        <div className="flex flex-col md:flex-row lg:flex-row-reverse  justify-center items-center md:items-start w-full  md:gap-8 mt-8 lg:mt-16">
           <div className="flex flex-col-reverse items-center flex-1">
             <div className="hidden md:flex lg:hidden justify-center items-center">
               <div className=" flex flex-1 flex-col rounded-3xl w-[50%] h-32 p-4 bg-hero-bg bg-no-repeat bg-right-bottom md:bg-center bg-cover shadow-2xl border border-[#a3a3a3] mr-3">
