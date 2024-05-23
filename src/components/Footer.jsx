@@ -1,5 +1,5 @@
 import '../index.css'
-import yidneLogo from "../assets/Yidne-Logo.png";
+import yidneLogo from "../assets/Yidne-logo.png";
 import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {

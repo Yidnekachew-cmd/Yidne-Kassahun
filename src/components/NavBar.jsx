@@ -1,5 +1,5 @@
 import { useState } from "react";
-import yidneLogo from "../assets/Yidne-Logo.png";
+import yidneLogo from "../assets/Yidne-logo.png";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 // import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
