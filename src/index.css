@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section_padding {
+  padding: 1rem 4rem;
+}
+
+.gradient_bg {
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(12, 12, 12, 1) 0%,
+    rgba(31, 143, 166, 1) 100%
+  );
+}
+
+.gradient_bg-2 {
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(34, 141, 166, 1) 0%,
+    rgba(53, 60, 60, 1) 100%
+  );
+}
+
+.gradient_bg-3 {
+  /* global 92%+ browsers support */
+  background: radial-gradient(circle at 3% 25%, rgba(231, 232, 229, 1) 0%, rgba(41, 123, 119, 1) 100%);
+}
+
+.gradient_text {
+  color: radial-gradient(
+    circle at 3% 25%,
+    rgba(24, 20, 20, 1) 1%,
+    rgba(151, 171, 175, 1) 100%
+  );
+}
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
