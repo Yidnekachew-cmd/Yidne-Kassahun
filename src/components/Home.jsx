@@ -10,7 +10,7 @@ import Contact from "./Contact";
 import Ads from "./Ads";
 
 const resume =
-  "https://drive.google.com/file/d/1QgvkSTkEmd-LYfccSXNRb-3gaA2ZC-tr/view?usp=sharing";
+  "https://drive.google.com/file/d/17yU3pQLwV8gQFxGpKglT1Ia1hXLZIjUs/view?usp=sharing";
 
 const Home = () => {
   return (

@@ -25,7 +25,7 @@ const projectsData = [
     id: 3,
     title: "Population Index",
     description:
-      "A website that is used as a showcase to demonstrate my skills and abilities in building responsive and interactive web applications using react.",
+      "Population Index is a powerful React-based SPA that allows you to explore detailed population metrics for countries all around the world!",
     image: project3,
     live: "https://population-index.onrender.com/",
     github: "https://github.com/Yidnekachew-cmd/Popuation-Index",
