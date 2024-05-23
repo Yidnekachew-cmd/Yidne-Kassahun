@@ -42,7 +42,7 @@ This Personal Portfolio is a dynamic and interactive portfolio website built wit
 </details>
 
 ### App Screenshot
-![Portfolio](https://github.com/Yidnekachew-cmd/Yidne-Kassahun/assets/104775335/ce97e044-e517-416f-b8ef-0b140d8d1ffb)
+![Portfolio](https://github.com/Yidnekachew-cmd/Yidne-Kassahun/assets/104775335/b4b2f81f-27cd-4ee3-8ae1-950ce3ac38ae)
 
 
 
@@ -53,7 +53,7 @@ This Personal Portfolio is a dynamic and interactive portfolio website built wit
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://portfolio-14rj.onrender.com/)
+- [Live Demo](https://yidne-portfolio.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
