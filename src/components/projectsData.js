@@ -18,8 +18,8 @@ const projectsData = [
     description:
       "A website that is used as a showcase to demonstrate my skills and abilities in building responsive and interactive web applications using react.",
     image: project2,
-    live: "",
-    github: "",
+    live: "https://reastaurant-app.onrender.com/",
+    github: "https://github.com/Yidnekachew-cmd/Reastaurant-App",
   },
   {
     id: 3,
