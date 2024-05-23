@@ -1,6 +1,6 @@
 import project1 from "../assets/GPT_3.png";
 import project2 from "../assets/image.png";
-import project3 from "../assets/Population-Index.png";
+import project3 from "../assets/Population-Index-1.png";
 const projectsData = [
   {
     id: 1,
