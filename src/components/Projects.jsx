@@ -15,7 +15,7 @@ const Projects = () => {
           <div className="border-b-[#456c75] border-4 w-10 mx-auto mt-4 lg:mt-6" />
         </div>
 
-        <div className="flex flex-col justify-center items-start md:flex-row md:flex-wrap md:items-center gap-8  lg:gap-8 mt-8 lg:mt-16 cursor-pointer ">
+        <div className="flex flex-col justify-center items-start md:flex-row md:flex-wrap md:justify-start gap-8  lg:gap-8 mt-8 lg:mt-16 cursor-pointer ">
           {projectsData.map((project, index) => (
             <div
               key={index}
