@@ -10,7 +10,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-    - [Screenshot](#screenshot)]
+    - [Screenshot](#screenshot)
   - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
@@ -41,7 +41,7 @@ This Personal Portfolio is a dynamic and interactive portfolio website built wit
   </ul>
 </details>
 
-### App Screenshot
+### App Screenshot <a name="screenshot"></a>
 ![Portfolio](https://github.com/Yidnekachew-cmd/Yidne-Kassahun/assets/104775335/1242d486-6f75-4dbb-b5ef-5cc7ad0c1829)
 
 
