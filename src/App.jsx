@@ -1,12 +1,12 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
-import './index.css';
-import NavBar from './components/NavBar';
-import Home from './components/Home';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Route, Routes, useNavigate } from "react-router-dom";
+import "./index.css";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
