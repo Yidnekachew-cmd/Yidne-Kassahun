@@ -1,7 +1,7 @@
-import '../index.css';
-import aboutPic from '../assets/profile-about.png'
-import experiancePic from '../assets/experience.png'
-import educationPic from '../assets/education.png'
+import "../index.css";
+import aboutPic from "../assets/profile-about.png";
+import experiancePic from "../assets/experience.png";
+import educationPic from "../assets/education.png";
 // import arrow from '../assets/arrow.png'
 
 const About = () => {
@@ -69,7 +69,7 @@ const About = () => {
                     Experience
                   </h3>
                   <p className="text-xs lg:text-md xl:text-lg xl:text-center text-justify text-[#3c4a4e]">
-                    1+ years Frontend Development
+                    3 years in the tech indusrty
                   </p>
                 </div>
               </div>
@@ -89,17 +89,28 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-black bg-opacity-5 p-8 mt-6 md:mt-0 lg:mb-6 md:rounded-3xl">
+            <div className="bg-black bg-opacity-5 p-8 mt-6 md:mt-0 lg:mb-6 md:rounded-3xl space-y-2">
               <p className="text-justify text-md xl:text-lg  text-[#3c4a4e] ">
-                I am a highly motivated individual who has made the transition
-                from mechanical engineering to software engineering. After
-                completing my bachelor&apos;s degree in mechanical engineering,
-                I made the decision to follow my passion for software
-                engineering and enroll in Microverse, an online boot camp.
-                Currently, I am a Front-End Developer and constantly strive to
-                learn and improve my skills to become a Full-stack Developer. I
-                am on the path to a successful career in software engineering
-                and am open to new opportunities.
+                I am a highly motivated professional who transitioned from
+                mechanical engineering to software engineering, driven by a
+                passion for technology and problem-solving. After earning my
+                Bachelor&apos;s degree in Mechanical Engineering, I pursued my
+                interest in software by enrolling in Microverse, a remote,
+                full-time web development program.
+              </p>
+              <p className="text-justify text-md xl:text-lg  text-[#3c4a4e] ">
+                Through hands-on experience in both front-end development and
+                quality assurance, I discovered my passion for delivering
+                reliable, high-quality software. Currently, I work as a Quality
+                Assurance Engineer, where I apply my analytical mindset and
+                attention to detail to ensure seamless user experiences and
+                robust application performance.
+              </p>
+              <p className="text-justify text-md xl:text-lg  text-[#3c4a4e] ">
+                I am continuously learning and growing in the QA field—with a
+                long-term goal of becoming a versatile QA Automation Engineer.
+                I&apos;m open to new opportunities where I can contribute, grow,
+                and make an impact on product quality and team success.
               </p>
             </div>
           </div>
@@ -113,6 +124,6 @@ const About = () => {
       </div>
     </div>
   );
-}
+};
 
-export default About
+export default About;
