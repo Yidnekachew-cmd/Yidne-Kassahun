@@ -8,9 +8,9 @@ import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Ads from "./Ads";
+// import resume from "src/assets/Yidnekachew_Kassahun_QA_Engineer_Resume.pdf";
 
-const resume =
-  "https://drive.google.com/file/d/17yU3pQLwV8gQFxGpKglT1Ia1hXLZIjUs/view?usp=sharing";
+const resume = "src/assets/Yidnekachew_Kassahun_QA_Engineer_Resume.pdf";
 
 const Home = () => {
   return (
@@ -25,15 +25,18 @@ const Home = () => {
             />
           </div>
           <div className="flex flex-1 flex-col items-center justify-center mt-6  lg:items-start">
-            <div className=" text-center mb-5  lg:space-y-1 lg:mb-8 lg:text-left xl:space-y-2 xl:mb-10">
+            <div className=" text-center mb-5  lg:space-y-1  lg:text-left xl:space-y-2 ">
               <p className=" text-md lg:text-lg xl:text-2xl font-bold text-[#869199] ">
                 Hello, I&apos;m
               </p>
-              <h1 className="text-2xl lg:text-3xl xl:text-4xl text-center font-bold text-[#3c4a4e] ">
-                Yidne Kassahun
+              <h1 className="text-2xl lg:text-3xl xl:text-4xl text-center lg:text-left font-bold text-[#3c4a4e] ">
+                Yidnekachew Kassahun
               </h1>
               <p className="text-md lg:text-lg xl:text-2xl font-bold text-[#869199] ">
-                Frontend Developer
+                Software QA Engineer
+              </p>
+              <p className="text-sm lg:text-base xl:text-lg text-[#869199] font-semibold">
+                Building quality into technology — from idea to execution.
               </p>
             </div>
             <div className="flex justify-center items-center gap-4 cursor-pointer text-xs mb-1 lg:mb-2  xl:text-sm xl:mb-3">
