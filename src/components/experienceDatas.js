@@ -1,98 +1,205 @@
 const experienceDatas = [
   {
     id: 1,
-    title: "Frontend Development",
+    title: "Testing Experties",
     experiences: [
       {
-        title: "HTML",
+        title: "Manual Testing",
+      },
+      {
+        title: "Automated Testing",
+      },
+      {
+        title: "Functional Testing",
         level: "Experienced",
       },
       {
-        title: "CSS",
+        title: "Non-Functional Testing",
+      },
+      {
+        title: "Regression Testing",
         level: "Experienced",
       },
       {
-        title: "Bootstrap",
+        title: "Exploratory Testing",
         level: "Experienced",
       },
       {
-        title: "Tailwind CSS",
+        title: "Accessibility Testing",
         level: "Experienced",
+      },
+      {
+        title: "Cross-Browser Testing",
+        level: "Experienced",
+      },
+      {
+        title: "API Testing",
+        level: "Experienced",
+      },
+      {
+        title: "Performance Testing",
+        level: "Intermediate",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Tools & Frameworks",
+    experiences: [
+      {
+        title: "Playwright",
+        level: "Basic",
+      },
+      {
+        title: "Cypress",
+        level: "Basic",
+      },
+      {
+        title: "Postman ",
+        level: "Basic",
+      },
+      {
+        title: "JMeter ",
+        level: "Basic",
+      },
+      {
+        title: "BrowserStack  ",
+        level: "Basic",
+      },
+      {
+        title: "JAWS",
+        level: "Basic",
+      },
+      { title: "NVDA" },
+      { title: "WAVE" },
+      {
+        title: "Chrome DevTools ",
+        level: "Experienced",
+      },
+      {
+        title: "Git / GitHub",
+        level: "Experienced",
+      },
+      {
+        title: "GitHub Actions ",
+        level: "Experienced",
+      },
+      {
+        title: "Azure DevOps",
+        level: "Experienced",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Test & Defect Management",
+    experiences: [
+      {
+        title: "Jira ",
+        level: "Experienced",
+      },
+      {
+        title: "TestRail",
+        level: "Experienced",
+      },
+      {
+        title: "TestLink",
+        level: "Experienced",
+      },
+      {
+        title: "Zephyr ",
+        level: "Experienced",
+      },
+      {
+        title: "Azure DevOps",
+        level: "Experienced",
+      },
+      {
+        title: "Linear ",
+        level: "Intermediate",
+      },
+      {
+        title: "Trello ",
+        level: "Intermediate",
+      },
+      {
+        title: "Google Sheets",
+        level: "Intermediate",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Programming Languages",
+    experiences: [
+      {
+        title: "HTML / CSS ",
+        level: "Intermediate",
       },
       {
         title: "JavaScript",
         level: "Experienced",
       },
       {
-        title: "ReactJs",
-        level: "Experienced",
-      },
-      {
-        title: "Typescript",
+        title: "TypeScript ",
         level: "Intermediate",
       },
       {
-        title: "Redux Tool Kit",
-        level: "Experienced",
+        title: "ReactJS",
+        level: "Intermediate",
       },
-    ],
-  },
-  {
-    id: 2,
-    title: "Backend Development",
-    experiences: [
+      {
+        title: "Redux Toolkit",
+        level: "Intermediate",
+      },
       {
         title: "PostgreSQL",
-        level: "Basic",
-      },
-      {
-        title: "MongoDb",
-        level: "Basic",
-      },
-      {
-        title: "Node JS",
-        level: "Basic",
-      },
-      {
-        title: "Ruby",
-        level: "Basic",
+        level: "Intermediate",
       },
     ],
   },
   {
-    id: 3,
-    title: "Tools",
+    id: 5,
+    title: "Methodologies & Soft Skills ",
     experiences: [
       {
-        title: "Git",
+        title: "Agile Methodologies  ",
         level: "Experienced",
       },
       {
-        title: "GitHub",
-        level: "Experienced",
-      },
-      {
-        title: "Chrom Dev Tools",
-        level: "Experienced",
-      },
-      {
-        title: "Vs Code",
-        level: "Experienced",
-      },
-      {
-        title: "npm",
-        level: "Experienced",
-      },
-      {
-        title: "Postman",
+        title: "Scrum",
         level: "Intermediate",
       },
       {
-        title: "JEST",
+        title: "Collaboration",
         level: "Intermediate",
       },
       {
-        title: "Rspec",
+        title: "Remote Pair Programming",
+        level: "Experienced",
+      },
+      {
+        title: "Analytical Thinking ",
+        level: "Experienced",
+      },
+      {
+        title: "Attention to Detail",
+        level: "Experienced",
+      },
+      {
+        title: "Communication  ",
+        level: "Experienced",
+      },
+      {
+        title: " Documentation ",
+        level: "Experienced",
+      },
+      {
+        title: "Problem-Solving",
+        level: "Experienced",
+      },
+      {
+        title: "Time Management",
         level: "Intermediate",
       },
     ],

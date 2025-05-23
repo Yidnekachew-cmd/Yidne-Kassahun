@@ -24,7 +24,11 @@
 
 .gradient_bg-3 {
   /* global 92%+ browsers support */
-  background: radial-gradient(circle at 3% 25%, rgba(231, 232, 229, 1) 0%, rgba(41, 123, 119, 1) 100%);
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(231, 232, 229, 1) 0%,
+    rgba(41, 123, 119, 1) 100%
+  );
 }
 
 .gradient_text {
@@ -60,4 +64,18 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+}
+
+@keyframes pulse-scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-scale {
+  animation: pulse-scale 1.5s infinite;
 }

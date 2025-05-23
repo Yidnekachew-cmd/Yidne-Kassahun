@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "../index.css";
+import { useLocation } from "react-router-dom";
 import profileImg from "../assets/Profile-picture.png";
 import linkedin from "../assets/linkedin.png";
 import github from "../assets/github.png";
 import About from "./About";
 import Experience from "./Experience";
-import Projects from "./Projects";
+import FrontendProjects from "./FrontendProjects";
+import QAProjects from "./QAProjects";
 import Contact from "./Contact";
 import Ads from "./Ads";
 // import resume from "src/assets/Yidnekachew_Kassahun_QA_Engineer_Resume.pdf";
@@ -13,6 +16,17 @@ import Ads from "./Ads";
 const resume = "src/assets/Yidnekachew_Kassahun_QA_Engineer_Resume.pdf";
 
 const Home = () => {
+  const location = useLocation();
+  const [activeProject, setActiveProject] = useState("qa");
+
+  // Show frontend projects only if they came from that route
+  useEffect(() => {
+    if (location.pathname === "/frontendProjects") {
+      setActiveProject("frontend");
+    } else {
+      setActiveProject("qa");
+    }
+  }, [location.pathname]);
   return (
     <div>
       <div className="w-full bg-hero-bg bg-contain bg-bottom  md:bg-cover bg-no-repeat  ">
@@ -41,7 +55,7 @@ const Home = () => {
             </div>
             <div className="flex justify-center items-center gap-4 cursor-pointer text-xs mb-1 lg:mb-2  xl:text-sm xl:mb-3">
               <a
-                className="text-[#cfcab9] gradient_bg-2  font-bold rounded-3xl px-4 py-2 hover:bg-[#8731B8] transition-colors duration-300 "
+                className="text-[#cfcab9] gradient_bg-2  font-bold rounded-3xl px-4 py-2 transform transition duration-500 hover:scale-105 cursor-pointer "
                 href={resume}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -50,7 +64,7 @@ const Home = () => {
               </a>
               <Link
                 to="/Contact"
-                className="text-[#cfcab9] gradient_bg-2  font-bold rounded-3xl px-4 py-2 hover:bg-[#8731B8] transition-colors duration-300 "
+                className="text-[#cfcab9] gradient_bg-2  font-bold rounded-3xl px-4 py-2 transform transition duration-500 hover:scale-105 cursor-pointer "
               >
                 Contact Info
               </Link>
@@ -87,7 +101,10 @@ const Home = () => {
       <About />
       <Experience />
       <Ads />
-      <Projects />
+      {/* <FrontendProjects />
+      <QAProjects /> */}
+      {activeProject === "qa" && <QAProjects />}
+      {activeProject === "frontend" && <FrontendProjects />}
       <Contact />
     </div>
   );

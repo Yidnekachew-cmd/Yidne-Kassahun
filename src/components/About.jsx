@@ -57,8 +57,8 @@ const About = () => {
           </div>
 
           <div className="flex flex-1 flex-col lg:flex-col-reverse  w-[90%] md:w-[40%] mx-auto">
-            <div className="flex md:hidden lg:flex justify-center items-center">
-              <div className=" flex flex-1 flex-col rounded-3xl w-[50%] h-32 xl:h-44 p-4 bg-hero-bg bg-no-repeat bg-right-bottom md:bg-center bg-cover shadow-2xl border border-[#a3a3a3] mr-3 lg:mr-6">
+            <div className="flex md:hidden lg:flex justify-center items-center ">
+              <div className=" flex flex-1 flex-col rounded-3xl w-[50%] h-32 xl:h-44 p-4 bg-hero-bg bg-no-repeat bg-right-bottom md:bg-center bg-cover shadow-2xl border border-[#a3a3a3] mr-3 lg:mr-6 transform transition duration-500 hover:scale-105 cursor-pointer">
                 <img
                   src={experiancePic}
                   alt="Experience icon"
@@ -73,7 +73,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-1 flex-col rounded-3xl w-[50%] h-32 xl:h-44 p-4 bg-hero-bg bg-no-repeat bg-right-bottom md:bg-center bg-cover shadow-2xl border border-[#a3a3a3] ">
+              <div className="flex flex-1 flex-col rounded-3xl w-[50%] h-32 xl:h-44 p-4 bg-hero-bg bg-no-repeat bg-right-bottom md:bg-center bg-cover shadow-2xl border border-[#a3a3a3] transform transition duration-500 hover:scale-105 cursor-pointer ">
                 <img
                   src={educationPic}
                   alt="Education icon"

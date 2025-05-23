@@ -8,8 +8,14 @@ import "../index.css";
 const NavBar = () => {
   const location = useLocation();
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [open, setOpen] = useState(false);
   const closeMenu = () => {
     setToggleMenu(false);
+  };
+
+  const handleLinkClick = () => {
+    closeMenu(); // Close mobile menu if applicable
+    setOpen(false); // Close dropdown
   };
   return (
     // <div className="w-full shadow-2xl bg-white fixed z-10">
@@ -172,7 +178,7 @@ const NavBar = () => {
                   Experience
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/Projects"
                   onClick={closeMenu}
@@ -184,6 +190,53 @@ const NavBar = () => {
                 >
                   Projects
                 </Link>
+              </li> */}
+              <li className="relative group">
+                <button
+                  onClick={() => setOpen(!open)} // Toggle dropdown on click
+                  onMouseEnter={() => setOpen(true)} // Optional: open on hover
+                  className={`hover:text-[#cfcab9] text-[#a5a5aa] ${
+                    location.pathname === "/Projects"
+                      ? "border-b-2 border-[#2d718b]"
+                      : ""
+                  }`}
+                >
+                  Projects ▾
+                </button>
+
+                {open && (
+                  <ul
+                    className="absolute left-0 mt-2 gradient_bg border border-gray-700 rounded-md shadow-lg z-50 w-48"
+                    onMouseLeave={() => setOpen(false)} // Close when mouse leaves the dropdown area
+                  >
+                    <li>
+                      <Link
+                        to="/QAProjects"
+                        onClick={handleLinkClick}
+                        className={`block px-4 py-2 hover:bg-[#2d718b] hover:text-white text-[#a5a5aa] ${
+                          location.pathname === "/QAProjects"
+                            ? "bg-[#2d718b] text-white"
+                            : ""
+                        }`}
+                      >
+                        QA Projects
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/frontendProjects"
+                        onClick={handleLinkClick}
+                        className={`block px-4 py-2 hover:bg-[#2d718b] hover:text-white text-[#a5a5aa] ${
+                          location.pathname === "/frontendProjects"
+                            ? "bg-[#2d718b] text-white"
+                            : ""
+                        }`}
+                      >
+                        Frontend Projects
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li>
                 <Link
@@ -241,7 +294,7 @@ const NavBar = () => {
               Experience
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/Projects"
               className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
@@ -252,6 +305,53 @@ const NavBar = () => {
             >
               Projects
             </Link>
+          </li> */}
+          <li className="relative group">
+            <button
+              onClick={() => setOpen(!open)} // Toggle dropdown on click
+              onMouseEnter={() => setOpen(true)} // Optional: open on hover
+              className={`hover:text-[#cfcab9] text-[#a5a5aa] ${
+                location.pathname === "/Projects"
+                  ? "border-b-2 border-[#2d718b]"
+                  : ""
+              }`}
+            >
+              Projects ▾
+            </button>
+
+            {open && (
+              <ul
+                className="absolute left-0 mt-2 gradient_bg border border-gray-700 rounded-md shadow-lg z-50 w-48"
+                onMouseLeave={() => setOpen(false)} // Close when mouse leaves the dropdown area
+              >
+                <li>
+                  <Link
+                    to="/QAProjects"
+                    onClick={handleLinkClick}
+                    className={`block px-4 py-2 hover:bg-[#2d718b] hover:text-white text-[#a5a5aa] ${
+                      location.pathname === "/QAProjects"
+                        ? "bg-[#2d718b] text-white"
+                        : ""
+                    }`}
+                  >
+                    QA Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/frontendProjects"
+                    onClick={handleLinkClick}
+                    className={`block px-4 py-2 hover:bg-[#2d718b] hover:text-white text-[#a5a5aa] ${
+                      location.pathname === "/frontendProjects"
+                        ? "bg-[#2d718b] text-white"
+                        : ""
+                    }`}
+                  >
+                    Frontend Projects
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
         </ul>
         <div className="flex justify-end items-center flex-1 pr-16 ">

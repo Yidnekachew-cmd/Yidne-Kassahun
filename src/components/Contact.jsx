@@ -21,7 +21,7 @@ const Contact = () => {
             can work together!
           </p>
         </div>
-        <div className="flex flex-row items-center mx-auto md:justify-around justify-center gap-3  rounded-3xl  gradient_bg-3 w-[70%] mt-3 md:py-2 lg:w-[60%] lg:mt-8">
+        <div className="flex flex-row items-center mx-auto md:justify-around justify-center gap-3  rounded-3xl  gradient_bg-3 w-[70%] mt-3 md:py-2 lg:w-[60%] lg:mt-8 lg:gap-1">
           <div>
             <a
               href="mailto:examplemail@gmail.com"
@@ -30,7 +30,9 @@ const Contact = () => {
               target="_blank"
             >
               <img src={email} alt="Email icon" className="h-6 animate-pulse" />
-              <p className="hidden md:block">Yamiyekn@gmail.com</p>
+              <p className="hidden md:block ">
+                Yidnekachew.kassahun.qa@gmail.com
+              </p>
             </a>
           </div>
           <div>
@@ -45,7 +47,7 @@ const Contact = () => {
                 alt="LinkedIn icon"
                 className="h-5 animate-pulse"
               />
-              <p className="hidden md:block">LinkedIn</p>
+              <p className="hidden md:block lg:text-[#e8eaec]">LinkedIn</p>
             </a>
           </div>
         </div>

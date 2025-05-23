@@ -1,9 +1,19 @@
-import '../index.css'
+import "../index.css";
 import yidneLogo from "../assets/Yidne-logo.png";
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const Footer = () => {
   const location = useLocation();
+  const [open, setOpen] = useState(false);
+  const closeMenu = () => {
+    setToggleMenu(false);
+  };
+
+  const handleLinkClick = () => {
+    closeMenu(); // Close mobile menu if applicable
+    setOpen(false); // Close dropdown
+  };
   return (
     <footer className="gradient_bg w-full">
       <div className=" flex flex-col md:flex-row justify-center md:justify-between items-center h-[24svh] ">
@@ -45,7 +55,7 @@ const Footer = () => {
               Experience
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/Projects"
               className={` hover:text-[#cfcab9] text-[#a5a5aa] ${
@@ -56,6 +66,53 @@ const Footer = () => {
             >
               Projects
             </Link>
+          </li> */}
+          <li className="relative group">
+            <button
+              onClick={() => setOpen(!open)} // Toggle dropdown on click
+              onMouseEnter={() => setOpen(true)} // Optional: open on hover
+              className={`hover:text-[#cfcab9] text-[#a5a5aa] ${
+                location.pathname === "/Projects"
+                  ? "border-b-2 border-[#2d718b]"
+                  : ""
+              }`}
+            >
+              Projects ▾
+            </button>
+
+            {open && (
+              <ul
+                className="absolute left-0 mt-2 gradient_bg border border-gray-700 rounded-md shadow-lg z-50 w-48"
+                onMouseLeave={() => setOpen(false)} // Close when mouse leaves the dropdown area
+              >
+                <li>
+                  <Link
+                    to="/QAProjects"
+                    onClick={handleLinkClick}
+                    className={`block px-4 py-2 hover:bg-[#2d718b] hover:text-white text-[#a5a5aa] ${
+                      location.pathname === "/QAProjects"
+                        ? "bg-[#2d718b] text-white"
+                        : ""
+                    }`}
+                  >
+                    QA Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/frontendProjects"
+                    onClick={handleLinkClick}
+                    className={`block px-4 py-2 hover:bg-[#2d718b] hover:text-white text-[#a5a5aa] ${
+                      location.pathname === "/frontendProjects"
+                        ? "bg-[#2d718b] text-white"
+                        : ""
+                    }`}
+                  >
+                    Frontend Projects
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
           <li>
             <Link

@@ -1,7 +1,7 @@
 import "../index.css";
 import projectsData from "./projectsData";
 
-const Projects = () => {
+const FrontendProjects = () => {
   return (
     <div className="w-full  gradient_bg-3">
       <div className="flex flex-col justify-center  items-center w-[80%] mx-auto  h-auto py-10 lg:py-20">
@@ -10,7 +10,7 @@ const Projects = () => {
             Browse My Recent
           </p>
           <h1 className="text-xl lg:text-2xl xl:text-3xl  font-bold text-[#3c4a4e]">
-            Projects
+            Frontend Projects
           </h1>
           <div className="border-b-[#456c75] border-4 w-10 mx-auto mt-4 lg:mt-6" />
         </div>
@@ -68,4 +68,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default FrontendProjects;
