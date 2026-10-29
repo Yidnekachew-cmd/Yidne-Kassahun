@@ -1,166 +1,54 @@
-<a name="readme-top"></a>
+# Portfolio – Yidnekachew Kassahun
 
-<h1 align='center'> Portfolio - Yidne Kassahun 🤘 </h1>
+Personal portfolio of a Software QA Engineer and QA Team Lead, with a built-in admin panel for editing content.
 
+**Live:** https://yidne-portfolio.onrender.com/
 
-# Table of Contents
+## Tech stack
 
-- [Table of Contents](#-table-of-contents)
-- [ Portfolio - Yidne Kassahun  😉](#-about-project-)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
-    - [Screenshot](#screenshot)
-  - [🚀 Live Demo](#live-demo)
-  - [💻 Getting Started ](#-getting-started-)
-    - [Prerequisites](#prerequisites)
-    - [Setup](#setup)
-    - [Install](#install)
-    - [Usage](#usage)
-  - [👥 Author ](#-author-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [❓ FAQ ](#-faq-)
+- React 18 + Vite
+- Tailwind CSS
+- Supabase (database, login and file storage for the admin)
 
-<!-- PROJECT DESCRIPTION -->
+## Features
 
-# Portfolio - Yidne Kassahun  😉 <a name="about-project"></a>
+- Single-page site: hero, about, skills, experience timeline, QA projects, earlier frontend work, certifications, contact
+- `/admin` panel to edit every section (add, reorder and delete items, upload photos and CV)
+- Runs without Supabase: the site falls back to the built-in content in `src/content/defaultContent.js`
 
-This Personal Portfolio is a dynamic and interactive portfolio website built with React. It provides a modern and visually appealing platform for showcasing my skills, projects, and achievements to potential employers or clients.
+## Run locally
 
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
-
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-### App Screenshot <a name="screenshot"></a>
-![Portfolio](https://github.com/Yidnekachew-cmd/Yidne-Kassahun/assets/104775335/1242d486-6f75-4dbb-b5ef-5cc7ad0c1829)
-
-
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo](https://yidne-portfolio.onrender.com/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> 
-
-
-<!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-
-To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need:
-
-```sh
-- [x] A web browser like Google Chrome.
-- [x] A code editor like Visual Studio Code with Git and Node.js.
+```bash
+npm install
+npm run dev
 ```
 
-You can check if Git is installed by running the following command in the terminal.
-```sh
-$ git --version
-```
+Open http://localhost:5173 for the site and http://localhost:5173/admin for the admin panel.
 
-Likewise for Node.js and npm for package installation.
-```sh
-$ node --version && npm --version
-```
-### Setup
+## Admin setup (Supabase, free plan)
 
-Clone this repository using the GitHub link provided below.
+1. Create a free project at [supabase.com](https://supabase.com).
+2. **SQL Editor → New query**: paste [`supabase/setup.sql`](supabase/setup.sql), replace every `you@example.com` with your email, and run it.
+3. **Authentication → Users → Add user → Create new user**: enter the same email and a strong password, and tick **Auto Confirm User**.
+4. **Authentication → Sign In / Providers**: turn off **Allow new users to sign up**, so nobody else can create an account.
+5. **Project Settings → API**: copy the Project URL and the `anon` public key.
+6. Copy `.env.example` to `.env.local` and paste both values. Restart `npm run dev`.
+7. Open `/admin`, sign in, click **Save changes** once to store the starting content, and you're live.
 
+> Use only the `anon` key in this app. Never put the `service_role` key in the code or in `.env` files.
 
-### Install
+## Deploy on Render
 
-In the terminal, go to your file directory and run this command.
+- Build command: `npm install && npm run build`; publish directory: `dist`
+- **Environment**: add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`
+- **Redirects/Rewrites**: add a rewrite from `/*` to `/index.html` so `/admin` works on page refresh
 
-```sh
-$ git clone https://github.com/Yidnekachew-cmd/Yidne-Kassahun.git
-```
+On the free plan, Supabase pauses a project after a week with no activity. If it's paused, the site automatically shows the built-in content; restore the project from the Supabase dashboard.
 
+## Author
 
+**Yidnekachew Kassahun**: [LinkedIn](https://www.linkedin.com/in/yidnekachew-kassahun/) · [GitHub](https://github.com/Yidnekachew-cmd)
 
-### Usage
+## License
 
-Kindly modify the files as needed.
-
-In the project directory, you can run:
-```sh
-$ npm start
-```
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.
-
-You may also see any lint errors in the console.
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
-
-## 👥 Author <a name="author"></a>
-
-👤 **Yidnekachew Kassahun**
-
-- GitHub: [@Yidnekachew-cmd](https://github.com/Yidnekachew-cmd)
-- Twitter: [@Yidnekassahun](https://twitter.com/Yidnekassahun)
-- LinkedIn: [Yidne kassahun](https://www.linkedin.com/in/yidnekachew-kassahun/)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/Yidnekachew-cmd/Yidne-Kassahun/issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-## ⭐️ Show your support <a name="support"></a>
-
-
-Give a ⭐️ if you like this project!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## 📝 License <a name="license"></a>
-
-This project is copyright free. But I'll be grateful if you consider mentioning me.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<h2>Support if you can 💗</h2>
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/yidne)
+[MIT](./LICENSE)

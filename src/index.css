@@ -2,62 +2,198 @@
 @tailwind components;
 @tailwind utilities;
 
-.section_padding {
-  padding: 1rem 4rem;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
-.gradient_bg {
-  background: radial-gradient(
-    circle at 3% 25%,
-    rgba(12, 12, 12, 1) 0%,
-    rgba(31, 143, 166, 1) 100%
-  );
+body {
+  @apply bg-white font-sans text-brand-slate antialiased;
 }
 
-.gradient_bg-2 {
-  background: radial-gradient(
-    circle at 3% 25%,
-    rgba(34, 141, 166, 1) 0%,
-    rgba(53, 60, 60, 1) 100%
-  );
+::selection {
+  background: #1f8fa6;
+  color: #fff;
 }
 
-.gradient_bg-3 {
-  /* global 92%+ browsers support */
-  background: radial-gradient(circle at 3% 25%, rgba(231, 232, 229, 1) 0%, rgba(41, 123, 119, 1) 100%);
+@layer utilities {
+  .gradient_bg {
+    background: radial-gradient(circle at 3% 25%, rgba(12, 12, 12, 1) 0%, rgba(31, 143, 166, 1) 100%);
+  }
+
+  .gradient_bg-2 {
+    background: radial-gradient(circle at 3% 25%, rgba(34, 141, 166, 1) 0%, rgba(53, 60, 60, 1) 100%);
+  }
+
+  .gradient_bg-3 {
+    background: radial-gradient(circle at 3% 25%, rgba(231, 232, 229, 1) 0%, rgba(41, 123, 119, 1) 100%);
+  }
+
+  /* Faint measurement grid, like a test bench. */
+  .bg-grid {
+    background-image: linear-gradient(rgba(207, 202, 185, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(207, 202, 185, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .bg-grid-light {
+    background-image: linear-gradient(rgba(60, 74, 78, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(60, 74, 78, 0.07) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, #cfcab9 0%, #c9f2e7 35%, #3ba3e8 70%, #f0c9f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  }
 }
 
-.gradient_text {
-  color: radial-gradient(
-    circle at 3% 25%,
-    rgba(24, 20, 20, 1) 1%,
-    rgba(151, 171, 175, 1) 100%
-  );
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+  /* One vertical rhythm for every section. */
+  .section-y {
+    @apply py-24 lg:py-32;
+  }
+  .section-body {
+    @apply mt-12 lg:mt-16;
+  }
+  .btn-brand {
+    @apply gradient_bg-2 inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold text-brand-cream shadow-lg transition hover:brightness-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-sea/40 bg-white/70 px-5 py-2.5 text-sm font-semibold text-brand-slate transition hover:border-brand-teal hover:text-brand-teal focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky;
+  }
+  .btn-glow {
+    @apply relative inline-flex items-center gap-2 rounded-full bg-brand-cream px-6 py-3 text-sm font-semibold text-brand-ink transition hover:-translate-y-0.5 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4), 0 10px 40px -10px rgba(59, 163, 232, 0.7);
+  }
+  .btn-line {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-cream/30 px-6 py-3 text-sm font-semibold text-brand-cream transition hover:border-brand-cream hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky;
+  }
+  .chip {
+    @apply inline-block rounded-full bg-brand-teal/10 px-3 py-1 text-xs font-medium text-brand-tealdark;
+  }
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.22em];
+  }
+}
+
+/* Scroll reveal: elements start slightly lowered and fade in once seen. */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* AI pipeline: each step lights up in turn, like a CI run. */
+.pipeline-step {
+  animation: step-glow calc(var(--steps, 6) * 1s) ease-in-out infinite;
+  animation-delay: calc(var(--step, 0) * 1s);
+}
+
+.pipeline-step .pipeline-dot {
+  animation: dot-glow calc(var(--steps, 6) * 1s) ease-in-out infinite;
+  animation-delay: calc(var(--step, 0) * 1s);
+}
+
+@keyframes step-glow {
+  0%,
+  22%,
+  100% {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+  }
+  8% {
+    border-color: rgba(74, 222, 128, 0.55);
+    box-shadow: 0 0 0 1px rgba(74, 222, 128, 0.2), 0 24px 60px -24px rgba(74, 222, 128, 0.5);
+  }
+}
+
+@keyframes dot-glow {
+  0%,
+  22%,
+  100% {
+    background: #0b1416;
+    color: #cfcab9;
+  }
+  8% {
+    background: #4ade80;
+    color: #0c0c0c;
+  }
+}
+
+/* Hero entrance: staggered rise on first paint. */
+.hero-in {
+  opacity: 0;
+  animation: hero-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }
 
 .slide-bottom {
-  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes slide-bottom {
-  0% {
-    -webkit-transform: translateY(-25%);
-    transform: translateY(-25%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+  animation: slide-bottom 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes slide-bottom {
   0% {
-    -webkit-transform: translateY(-25%);
-    transform: translateY(-25%);
+    transform: translateY(-15%);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-in {
+    opacity: 1;
+    animation: none;
+  }
+  .pipeline-step,
+  .pipeline-step .pipeline-dot,
+  .slide-bottom,
+  .animate-marquee,
+  .animate-scan,
+  .animate-float {
+    animation: none !important;
   }
 }
