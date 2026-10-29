@@ -1,27 +1,41 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
-import './index.css';
-import NavBar from './components/NavBar';
-import Home from './components/Home';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./index.css";
+import HomePage from "./components/site/HomePage";
+import { ContentProvider } from "./lib/content";
+
+// The admin is only downloaded by people who open /admin.
+const AdminPage = lazy(() => import("./admin/AdminPage"));
 
 function App() {
   return (
-    <div className="w-full">
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Experience" element={<Experience />} />
-        <Route path="/Projects" element={<Projects />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <ContentProvider>
+            <HomePage />
+          </ContentProvider>
+        }
+      />
+      <Route
+        path="/admin"
+        element={
+          <Suspense fallback={<div className="gradient_bg min-h-screen" />}>
+            <AdminPage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="*"
+        element={
+          <ContentProvider>
+            <HomePage />
+          </ContentProvider>
+        }
+      />
+    </Routes>
   );
 }
 
-export default App
+export default App;
