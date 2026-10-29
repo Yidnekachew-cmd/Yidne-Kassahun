@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { RiMenu3Line, RiCloseLine, RiDownload2Line } from "react-icons/ri";
 import Logo from "../Logo";
+import { useInstallPrompt } from "../../lib/install";
 
 export const NAV_LINKS = [
   { href: "#about", label: "About" },
@@ -17,6 +18,7 @@ const NavBar = () => {
   const [progress, setProgress] = useState(0);
   const [active, setActive] = useState("");
   const close = () => setOpen(false);
+  const { canInstall, install } = useInstallPrompt();
 
   useEffect(() => {
     let frame;
@@ -94,14 +96,25 @@ const NavBar = () => {
           })}
         </ul>
 
-        <a
-          href="#contact"
-          className={`hidden rounded-full px-4 py-2 text-sm font-semibold transition duration-300 md:inline-flex ${
-            active === "#contact" ? "bg-white text-brand-ink" : "bg-brand-cream text-brand-ink hover:bg-white"
-          }`}
-        >
-          Let&apos;s talk
-        </a>
+        <div className="hidden items-center gap-2 md:flex">
+          {canInstall && (
+            <button
+              type="button"
+              onClick={install}
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-brand-cream transition duration-300 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky"
+            >
+              <RiDownload2Line aria-hidden /> Install app
+            </button>
+          )}
+          <a
+            href="#contact"
+            className={`inline-flex rounded-full px-4 py-2 text-sm font-semibold transition duration-300 ${
+              active === "#contact" ? "bg-white text-brand-ink" : "bg-brand-cream text-brand-ink hover:bg-white"
+            }`}
+          >
+            Let&apos;s talk
+          </a>
+        </div>
 
         <button
           type="button"
@@ -139,6 +152,21 @@ const NavBar = () => {
               </a>
             </li>
           ))}
+          {canInstall && (
+            <li>
+              <button
+                type="button"
+                onClick={() => {
+                  close();
+                  install();
+                }}
+                className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left text-brand-cream transition hover:bg-white/5"
+              >
+                <RiDownload2Line className="text-brand-sky" aria-hidden />
+                Install app
+              </button>
+            </li>
+          )}
         </ul>
       )}
     </header>
