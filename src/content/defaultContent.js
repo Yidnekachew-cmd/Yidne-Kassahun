@@ -1,10 +1,4 @@
-import profilePhoto from "../assets/Profile-picture.png";
-import aboutPhoto from "../assets/profile-about.png";
-import gpt3 from "../assets/GPT_3.png";
-import restaurant from "../assets/image.png";
-import hooBank from "../assets/Hoo-Bank.png";
-import populationIndex from "../assets/Population-Index-1.png";
-
+// Images live in public/images so their addresses are the same locally and live.
 // Built-in content. Used when Supabase is not configured or unreachable,
 // and as the starting point the admin edits and saves.
 // Client work under NDA is described without naming the client.
@@ -23,8 +17,8 @@ const defaultContent = {
     github: "https://github.com/Yidnekachew-cmd",
     // Served from public/. Replace by uploading a new PDF in the admin.
     resumeUrl: "/Yidnekachew_Kassahun_QA_Engineer_Resume.pdf",
-    photoUrl: profilePhoto,
-    aboutPhotoUrl: aboutPhoto,
+    photoUrl: "/images/profile.png",
+    aboutPhotoUrl: "/images/profile-about.png",
   },
   stats: [
     { value: "3+", label: "Years in software quality" },
@@ -251,7 +245,7 @@ const defaultContent = {
       id: "population-index",
       name: "Population Index",
       description: "React single-page app for exploring population metrics by country.",
-      image: populationIndex,
+      image: "/images/population-index.png",
       live: "https://population-index.onrender.com/",
       github: "https://github.com/Yidnekachew-cmd/Popuation-Index",
     },
@@ -259,7 +253,7 @@ const defaultContent = {
       id: "hoo-bank",
       name: "Hoo Bank",
       description: "Responsive fintech landing page built with React and Tailwind CSS.",
-      image: hooBank,
+      image: "/images/hoo-bank.jpg",
       live: "https://hoobank-zbaw.onrender.com/",
       github: "https://github.com/Yidnekachew-cmd/HooBank/tree/dev",
     },
@@ -267,7 +261,7 @@ const defaultContent = {
       id: "gpt3",
       name: "GPT-3 UI",
       description: "Modern, responsive React landing page.",
-      image: gpt3,
+      image: "/images/gpt-3.png",
       live: "https://gpt-3-wnao.onrender.com/",
       github: "https://github.com/Yidnekachew-cmd/GPT-3",
     },
@@ -275,7 +269,7 @@ const defaultContent = {
       id: "restaurant",
       name: "Restaurant Website",
       description: "Responsive restaurant site built with React.",
-      image: restaurant,
+      image: "/images/restaurant.png",
       live: "https://reastaurant-app.onrender.com/",
       github: "https://github.com/Yidnekachew-cmd/Reastaurant-App",
     },
