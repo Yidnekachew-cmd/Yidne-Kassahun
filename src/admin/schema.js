@@ -91,6 +91,19 @@ const schema = [
     ],
   },
   {
+    key: "testimonials",
+    label: "Testimonials",
+    type: "list",
+    help: "Quotes from colleagues, for example your LinkedIn recommendations. Shown under Experience; hidden while empty.",
+    itemTitle: (t) => t.name || "New testimonial",
+    fields: [
+      { name: "quote", label: "Quote", type: "textarea" },
+      { name: "name", label: "Name" },
+      { name: "role", label: "Role (e.g. Engineering Manager, EagleLion)" },
+      { name: "link", label: "LinkedIn URL (optional)" },
+    ],
+  },
+  {
     key: "projects",
     label: "QA Projects",
     type: "list",

@@ -155,6 +155,8 @@ const defaultContent = {
       ],
     },
   ],
+  // Filled from the admin once LinkedIn recommendations arrive; hidden while empty.
+  testimonials: [],
   projects: [
     {
       id: "bank-super-app",

@@ -193,7 +193,8 @@ body {
   .slide-bottom,
   .animate-marquee,
   .animate-scan,
-  .animate-float {
+  .animate-float,
+  .animate-photo-scan {
     animation: none !important;
   }
 }
