@@ -181,10 +181,12 @@ const Editor = ({ session }) => {
   const connected = Boolean(supabase);
 
   useEffect(() => {
-    fetchContent().then(({ content: c }) => {
+    fetchContent().then(({ content: c, source }) => {
       const start = connected ? c : mergeContent(readDraft() || c);
       setContent(start);
-      setSavedJson(JSON.stringify(connected ? c : readDraft() || c));
+      // Nothing stored in Supabase yet: leave it unsaved so the first save is possible.
+      if (connected && source !== "supabase") setSavedJson("");
+      else setSavedJson(JSON.stringify(connected ? c : readDraft() || c));
     });
   }, [connected]);
 
