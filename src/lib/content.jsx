@@ -3,8 +3,36 @@ import PropTypes from "prop-types";
 import defaultContent from "../content/defaultContent";
 import { supabase, CONTENT_TABLE, CONTENT_ROW_ID, MEDIA_BUCKET } from "./supabase";
 
+// Older saves stored bundler-only image paths (/src/assets/... locally, /assets/name-hash.ext
+// in a build) that break on the live site. Map them to the stable files in public/images.
+const LEGACY_IMAGES = {
+  "Profile-picture": "/images/profile.png",
+  "profile-about": "/images/profile-about.png",
+  "Population-Index-1": "/images/population-index.png",
+  "Hoo-Bank": "/images/hoo-bank.jpg",
+  GPT_3: "/images/gpt-3.png",
+  image: "/images/restaurant.png",
+};
+
+export const fixImagePath = (url) => {
+  if (typeof url !== "string") return url;
+  const m = url.match(/\/(?:src\/)?assets\/([^/?#]+?)(?:-[A-Za-z0-9_]{8})?\.(?:png|jpe?g|webp|svg)(?:[?#].*)?$/);
+  if (!m || /^https?:\/\/(?!localhost)/.test(url)) return url;
+  return LEGACY_IMAGES[m[1]] || url;
+};
+
+const fixImages = (c) => ({
+  ...c,
+  profile: c.profile && {
+    ...c.profile,
+    photoUrl: fixImagePath(c.profile.photoUrl),
+    aboutPhotoUrl: fixImagePath(c.profile.aboutPhotoUrl),
+  },
+  devProjects: (c.devProjects || []).map((p) => ({ ...p, image: fixImagePath(p.image) })),
+});
+
 // Saved content is merged over the defaults so sections added later still render.
-export const mergeContent = (saved) => ({ ...defaultContent, ...(saved || {}) });
+export const mergeContent = (saved) => fixImages({ ...defaultContent, ...(saved || {}) });
 
 export async function fetchContent() {
   if (!supabase) return { content: defaultContent, source: "default" };
