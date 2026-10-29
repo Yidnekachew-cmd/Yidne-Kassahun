@@ -198,7 +198,7 @@ export const Skills = () => {
 /* ---------- Experience ---------- */
 
 export const Experience = () => {
-  const { experience } = useContent().content;
+  const { experience, testimonials } = useContent().content;
   return (
     <section id="experience" className="gradient_bg relative isolate overflow-hidden section-y">
       <div className="bg-noise absolute inset-0 -z-10 opacity-[0.07] mix-blend-overlay" aria-hidden />
@@ -244,6 +244,36 @@ export const Experience = () => {
             );
           })}
         </ol>
+
+        {testimonials?.length > 0 && (
+          <div className="mt-16 lg:mt-20">
+            <Reveal as="h3" className="font-display text-2xl font-bold text-white sm:text-3xl">
+              What colleagues say
+            </Reveal>
+            <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+              {testimonials.map((t, i) => (
+                <Reveal as="figure" key={`${t.name}-${i}`} delay={(i % 2) * 100} className="flex flex-col rounded-3xl border border-white/10 bg-white/[0.05] p-6 sm:p-8">
+                  <span className="font-display text-5xl leading-none text-brand-sky" aria-hidden>
+                    &ldquo;
+                  </span>
+                  <blockquote className="mt-2 flex-1 text-lg leading-relaxed text-brand-cream">{t.quote}</blockquote>
+                  <figcaption className="mt-6 border-t border-white/10 pt-4">
+                    <p className="font-semibold text-white">
+                      {t.link ? (
+                        <a href={t.link} target="_blank" rel="noopener noreferrer" className="hover:text-brand-sky">
+                          {t.name}
+                        </a>
+                      ) : (
+                        t.name
+                      )}
+                    </p>
+                    {t.role && <p className="text-sm text-brand-mist">{t.role}</p>}
+                  </figcaption>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

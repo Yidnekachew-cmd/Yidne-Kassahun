@@ -2,6 +2,7 @@ import { FaLinkedin, FaGithub, FaArrowRight, FaFileDownload } from "react-icons/
 import { useContent } from "../../lib/content";
 import Terminal from "./Terminal";
 import CountUp from "./CountUp";
+import HeroPhoto from "./HeroPhoto";
 
 const d = (ms) => ({ "--delay": `${ms}ms` });
 
@@ -70,9 +71,7 @@ const Hero = () => {
 
         <div style={d(300)} className="hero-in relative mx-auto w-full min-w-0 max-w-lg lg:max-w-none">
           <div className="absolute -right-2 -top-10 z-10 w-28 animate-float sm:-right-6 sm:-top-14 sm:w-36">
-            <div className="rotate-6 rounded-[1.6rem] bg-gradient-to-br from-brand-sky via-brand-mint to-brand-blush p-[3px] shadow-2xl">
-              <img src={profile.photoUrl} alt={`Portrait of ${profile.name}`} className="aspect-square w-full rounded-[1.45rem] object-cover" />
-            </div>
+            <HeroPhoto src={profile.photoUrl} name={profile.name} />
           </div>
           <Terminal />
         </div>
