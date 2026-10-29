@@ -2,7 +2,7 @@
 // - Pages: network first, falling back to the cached app shell when offline.
 // - Built assets (/assets/*, hashed names), images and fonts: cache first.
 // - Everything else, including Supabase and other cross-origin APIs, goes straight to the network.
-const VERSION = "v1";
+const VERSION = "v2";
 const SHELL = `shell-${VERSION}`;
 const STATIC = `static-${VERSION}`;
 const SHELL_FILES = ["/", "/index.html", "/manifest.webmanifest", "/favicon.svg", "/icon-192.png", "/icon-512.png"];

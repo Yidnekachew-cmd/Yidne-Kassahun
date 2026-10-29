@@ -39,20 +39,47 @@ const fixImages = (c) => ({
 // Saved content is merged over the defaults so sections added later still render.
 export const mergeContent = (saved) => fixImages({ ...defaultContent, ...(saved || {}) });
 
+// Last content loaded from Supabase, kept on the device so the installed app works offline.
+const CACHE_KEY = "portfolio-content-cache";
+const FETCH_TIMEOUT_MS = 4000;
+
+const readCached = () => {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+};
+
+const writeCached = (data) => {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+  } catch {
+    /* storage full or blocked: offline copy just isn't kept */
+  }
+};
+
+const fallback = (reason) => {
+  const cached = readCached();
+  if (reason) console.warn(`Using ${cached ? "last saved" : "built-in"} content:`, reason);
+  return cached ? { content: mergeContent(cached), source: "cache" } : { content: defaultContent, source: "default" };
+};
+
 export async function fetchContent() {
   if (!supabase) return { content: defaultContent, source: "default" };
+  // supabase-js retries network errors, so offline it would keep the page waiting.
+  if (typeof navigator !== "undefined" && navigator.onLine === false) return fallback("offline");
   try {
-    const { data, error } = await supabase
-      .from(CONTENT_TABLE)
-      .select("data")
-      .eq("id", CONTENT_ROW_ID)
-      .maybeSingle();
+    const request = supabase.from(CONTENT_TABLE).select("data").eq("id", CONTENT_ROW_ID).maybeSingle();
+    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error("timed out")), FETCH_TIMEOUT_MS));
+    const { data, error } = await Promise.race([request, timeout]);
     if (error) throw error;
     if (!data) return { content: defaultContent, source: "default" };
+    writeCached(data.data);
     return { content: mergeContent(data.data), source: "supabase" };
   } catch (err) {
-    console.warn("Falling back to built-in content:", err.message);
-    return { content: defaultContent, source: "default" };
+    return fallback(err.message);
   }
 }
 
