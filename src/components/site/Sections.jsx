@@ -113,7 +113,7 @@ export const About = () => {
                   delay={i * 100}
                   className="group relative overflow-hidden rounded-3xl border border-brand-slate/10 bg-white/75 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-brand-teal/40 hover:bg-white hover:shadow-[0_24px_50px_-28px_rgba(31,143,166,0.6)]"
                 >
-                  <span className="font-mono text-sm font-bold text-brand-teal">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="font-mono text-sm font-bold text-brand-tealdark">{String(i + 1).padStart(2, "0")}</span>
                   <h3 className="mt-4 font-display text-xl font-bold leading-tight text-brand-ink">{pr.title}</h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-brand-slate">{pr.body}</p>
                   <span className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-brand-teal via-brand-sky to-brand-blush transition-transform duration-500 group-hover:scale-x-100" aria-hidden />

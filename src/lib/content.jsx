@@ -6,16 +6,21 @@ import { supabase, CONTENT_TABLE, CONTENT_ROW_ID, MEDIA_BUCKET } from "./supabas
 // Older saves stored bundler-only image paths (/src/assets/... locally, /assets/name-hash.ext
 // in a build) that break on the live site. Map them to the stable files in public/images.
 const LEGACY_IMAGES = {
-  "Profile-picture": "/images/profile.png",
-  "profile-about": "/images/profile-about.png",
-  "Population-Index-1": "/images/population-index.png",
+  "Profile-picture": "/images/profile.jpg",
+  "profile-about": "/images/profile-about.jpg",
+  "Population-Index-1": "/images/population-index.jpg",
   "Hoo-Bank": "/images/hoo-bank.jpg",
-  GPT_3: "/images/gpt-3.png",
-  image: "/images/restaurant.png",
+  GPT_3: "/images/gpt-3.jpg",
+  image: "/images/restaurant.jpg",
 };
+
+// The first public/images files were PNGs; lighter JPEG copies now sit beside them.
+const PNG_TO_JPG = new Set(["profile", "profile-about", "gpt-3", "population-index", "restaurant"]);
 
 export const fixImagePath = (url) => {
   if (typeof url !== "string") return url;
+  const png = url.match(/^\/images\/([a-z0-9-]+)\.png$/);
+  if (png && PNG_TO_JPG.has(png[1])) return `/images/${png[1]}.jpg`;
   const m = url.match(/\/(?:src\/)?assets\/([^/?#]+?)(?:-[A-Za-z0-9_]{8})?\.(?:png|jpe?g|webp|svg)(?:[?#].*)?$/);
   if (!m || /^https?:\/\/(?!localhost)/.test(url)) return url;
   return LEGACY_IMAGES[m[1]] || url;
