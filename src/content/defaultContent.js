@@ -23,7 +23,7 @@ const defaultContent = {
   stats: [
     { value: "3+", label: "Years in software quality" },
     { value: "17", label: "QA engineers led" },
-    { value: "6+", label: "Products tested" },
+    { value: "10K+", label: "Test cases in one regression cycle" },
   ],
   about: {
     paragraphs: [
@@ -119,8 +119,8 @@ const defaultContent = {
       start: "Jun 2025",
       end: "Present",
       bullets: [
-        "Lead a 17-person QA team testing a pre-launch mobile super app for one of Ethiopia's largest banks.",
-        "Built a QA dashboard with Claude Code that brings the team's test progress, failed cases, bugs and reports into one place.",
+        "Lead a 17-person QA team testing a pre-launch super app for one of Ethiopia's largest banks: 10,000+ test cases across 5 suites, 90% executed with a 97% pass rate.",
+        "Built a QA dashboard with Claude Code that tracks 10,000+ test cases live, bringing the team's test progress, failed cases, bugs and reports into one place.",
         "Created a test case sheet template that the whole QA team now uses.",
         "Write test plans and strategies for new features, and review test plans and test cases to close coverage gaps.",
         "Run mobile testing on Android and iOS for functionality, performance and UI consistency.",
@@ -151,6 +151,7 @@ const defaultContent = {
       bullets: [
         "Built responsive pages for an online learning platform with HTML, CSS and JavaScript, integrated with backend APIs.",
         "Ran manual tests across browsers and devices, and debugged and fixed bugs before release.",
+        "Finalized and handed over the project remotely during my first months at Ablaze Labs (Jun to Sep 2024).",
       ],
     },
   ],
@@ -161,7 +162,7 @@ const defaultContent = {
       domain: "Mobile banking · NDA",
       status: "In progress",
       description:
-        "Leading QA for a major Ethiopian bank's upcoming super app: test strategy, Android and iOS testing and launch readiness with a 17-person team. Client details are under NDA.",
+        "Leading QA for a major Ethiopian bank's upcoming super app: a regression cycle of 10,000+ test cases across mobile, backend, e-commerce and USSD suites, 90% executed with a 97% pass rate. Client details are under NDA.",
       tags: ["Test strategy", "Mobile", "Team lead"],
       link: "",
     },
