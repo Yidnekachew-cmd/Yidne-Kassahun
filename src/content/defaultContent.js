@@ -23,11 +23,11 @@ const defaultContent = {
   stats: [
     { value: "3+", label: "Years in software quality" },
     { value: "17", label: "QA engineers led" },
-    { value: "10K+", label: "Test cases in one regression cycle" },
+    { value: "6+", label: "Products tested" },
   ],
   about: {
     paragraphs: [
-      "I lead a 17-person QA team at EagleLion System Technology, testing a pre-launch mobile super app for one of Ethiopia's largest banks.",
+      "I lead a 17-person QA team at EagleLion System Technology, owning test strategy through to release readiness for banking and fintech products.",
       "I didn't start in software. I trained as a mechanical engineer, retrained through Microverse's full-stack program, and worked as a frontend developer before moving into QA. That path shapes how I test: I think in systems, I can read the code, and I write bug reports developers can act on.",
       "I also build tools that make QA work easier. I built our team's QA dashboard with Claude Code, and I created the test case sheet template the whole team now uses.",
       "I work as an AI-powered QA automation engineer: I use Claude Code to build and maintain test automation, and I review what it produces. Next, I'm adding Rest Assured to my API automation.",
@@ -120,8 +120,8 @@ const defaultContent = {
       start: "Jun 2025",
       end: "Present",
       bullets: [
-        "Lead a 17-person QA team testing a pre-launch super app for one of Ethiopia's largest banks: 10,000+ test cases across 5 suites, 90% executed with a 97% pass rate.",
-        "Built a QA dashboard with Claude Code that tracks 10,000+ test cases live, bringing the team's test progress, failed cases, bugs and reports into one place.",
+        "Lead a 17-person QA team on large-scale regression testing for an enterprise banking super app across mobile, web and backend services.",
+        "Built an internal QA dashboard with Claude Code that brings test progress, failed cases, bugs and reporting into one place.",
         "Created a test case sheet template that the whole QA team now uses.",
         "Write test plans and strategies for new features, and review test plans and test cases to close coverage gaps.",
         "Run mobile testing on Android and iOS for functionality, performance and UI consistency.",
@@ -165,7 +165,7 @@ const defaultContent = {
       domain: "Mobile banking · NDA",
       status: "In progress",
       description:
-        "Leading QA for a major Ethiopian bank's upcoming super app: a regression cycle of 10,000+ test cases across mobile, backend, e-commerce and USSD suites, 90% executed with a 97% pass rate. Client details are under NDA.",
+        "Leading QA for an enterprise banking super app: test strategy, large-scale regression testing, Android and iOS testing and release readiness. Client details are under NDA.",
       tags: ["Test strategy", "Mobile", "Team lead"],
       link: "",
     },

@@ -298,7 +298,7 @@ StatusBadge.propTypes = { status: PropTypes.string, dark: PropTypes.bool };
 
 // Release pipeline for the featured project: its tags as completed stages, then launch.
 const Pipeline = ({ steps, running }) => {
-  const stages = [...steps.map((s) => ({ label: s, done: true })), { label: running ? "Launch" : "Released", done: !running }];
+  const stages = [...steps.map((s) => ({ label: s, done: true })), { label: running ? "Release" : "Released", done: !running }];
   const doneCount = stages.filter((s) => s.done).length;
   return (
     <div className="rounded-2xl border border-white/10 bg-black/25 p-5 backdrop-blur">
