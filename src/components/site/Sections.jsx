@@ -137,7 +137,7 @@ export const Skills = () => {
       <div className="absolute left-1/2 top-0 -z-10 h-80 w-[40rem] -translate-x-1/2 rounded-full bg-brand-teal/25 blur-[120px]" aria-hidden />
       <div className="container-x">
         <SectionHeader index="02" label="toolkit" title="What's in the test bench." light>
-          What I use on real projects today, and what I'm learning next.
+          AI-assisted automation, API and mobile testing, and the strategy that ties it together.
         </SectionHeader>
         <div className="section-body grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((group, i) => {
@@ -145,7 +145,7 @@ export const Skills = () => {
             const learning = isLearningGroup(group.group);
             let card = "border-white/10 bg-white/[0.03] hover:border-brand-sky/50 hover:bg-white/[0.06]";
             if (ai) card = "sm:col-span-2 border-brand-sky/30 bg-gradient-to-br from-brand-sky/[0.12] via-white/[0.03] to-brand-blush/[0.10] hover:border-brand-sky/60";
-            if (learning) card = "sm:col-span-2 lg:col-span-3 border-dashed border-brand-sky/40 bg-brand-sky/[0.04] hover:border-brand-sky/70";
+            if (learning) card = "sm:col-span-2 lg:col-span-1 border-dashed border-brand-sky/40 bg-brand-sky/[0.04] hover:border-brand-sky/70";
             return (
               <Reveal
                 key={group.group}
@@ -573,8 +573,8 @@ export const AIWorkflow = () => {
       <div className="absolute left-1/4 top-10 -z-10 h-80 w-80 rounded-full bg-brand-blush/20 blur-[120px]" aria-hidden />
       <div className="absolute bottom-0 right-1/4 -z-10 h-80 w-80 rounded-full bg-brand-sky/20 blur-[120px]" aria-hidden />
       <div className="container-x">
-        <SectionHeader index="03" label="automation journey" title={<>Building toward <span className="text-gradient">AI-powered automation.</span></>} light>
-          What I've already built and automated, and the next steps I'm learning right now.
+        <SectionHeader index="03" label="ai-powered automation" title={<>How I automate with <span className="text-gradient">AI.</span></>} light>
+          Claude Code speeds up the building. I bring the risk focus, the judgement and the final review.
         </SectionHeader>
 
         <ol className="section-body relative grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

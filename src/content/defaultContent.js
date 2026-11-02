@@ -7,11 +7,11 @@ const defaultContent = {
     name: "Yidnekachew Kassahun",
     shortName: "Yidne",
     headline: "I break things so your users don't.",
-    title: "Software QA Engineer · QA Team Lead",
+    title: "AI-Powered QA Automation Engineer · QA Team Lead",
     tagline:
-      "QA Team Lead for banking and fintech products. I plan and lead testing, automate with Playwright, and I'm learning Claude Code and Rest Assured to grow into an AI-powered automation engineer.",
+      "I combine Playwright automation with Claude Code to build test suites and QA tools faster, and I lead the QA team that catches bugs before banking customers see them.",
     location: "Addis Ababa, Ethiopia",
-    availability: "Open to QA & test automation roles",
+    availability: "Open to AI-powered QA automation roles",
     email: "Yidnekachew.kassahun.qa@gmail.com",
     linkedin: "https://www.linkedin.com/in/yidnekachew-kassahun/",
     github: "https://github.com/Yidnekachew-cmd",
@@ -30,7 +30,7 @@ const defaultContent = {
       "I lead a 17-person QA team at EagleLion System Technology, testing a pre-launch mobile super app for one of Ethiopia's largest banks.",
       "I didn't start in software. I trained as a mechanical engineer, retrained through Microverse's full-stack program, and worked as a frontend developer before moving into QA. That path shapes how I test: I think in systems, I can read the code, and I write bug reports developers can act on.",
       "I also build tools that make QA work easier. I built our team's QA dashboard with Claude Code, and I created the test case sheet template the whole team now uses.",
-      "Right now I'm learning Claude Code for test automation and Rest Assured for API automation. My goal is to become an AI-powered automation engineer.",
+      "I work as an AI-powered QA automation engineer: I use Claude Code to build and maintain test automation, and I review what it produces. Next, I'm adding Rest Assured to my API automation.",
     ],
   },
   principles: [
@@ -77,19 +77,20 @@ const defaultContent = {
       body: "Run automated checks in CI so regressions show up before a release.",
     },
     {
+      title: "AI-assisted test automation",
+      tool: "Claude Code",
+      status: "done",
+      body: "Build and maintain automated tests with Claude Code, including Cucumber BDD suites with page objects for the QA dashboard.",
+    },
+    {
       title: "Automate API tests",
       tool: "Rest Assured",
       status: "learning",
       body: "Learning Rest Assured to move API checks from manual Postman runs into automated suites.",
     },
-    {
-      title: "AI-assisted test automation",
-      tool: "Claude Code",
-      status: "learning",
-      body: "Learning to write and maintain automated tests faster with Claude Code, always with a human review.",
-    },
   ],
   skills: [
+    { group: "AI-Powered Testing", items: ["Claude Code", "AI-assisted test automation", "GitHub Copilot"] },
     { group: "Test Automation", items: ["Playwright", "JavaScript", "TypeScript", "Page Object Model", "Cucumber (BDD)"] },
     { group: "API Testing", items: ["Postman", "REST APIs", "API test cases"] },
     {
@@ -106,9 +107,9 @@ const defaultContent = {
     },
     {
       group: "Dev & Tools",
-      items: ["Git & GitHub", "GitHub Actions", "Chrome DevTools", "GitHub Copilot", "HTML & CSS", "React"],
+      items: ["Git & GitHub", "GitHub Actions", "Chrome DevTools", "HTML & CSS", "React"],
     },
-    { group: "Currently Learning", items: ["Claude Code for test automation", "Rest Assured (API automation)"] },
+    { group: "Currently Learning", items: ["Rest Assured (API automation)"] },
   ],
   experience: [
     {
