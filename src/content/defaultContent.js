@@ -151,7 +151,20 @@ const defaultContent = {
       bullets: [
         "Built responsive pages for an online learning platform with HTML, CSS and JavaScript, integrated with backend APIs.",
         "Ran manual tests across browsers and devices, and debugged and fixed bugs before release.",
-        "Finalized and handed over the project remotely during my first months at Ablaze Labs (Jun to Sep 2024).",
+        "Finalized and handed over the project remotely after joining Ablaze Labs (Jun to Sep 2024).",
+      ],
+    },
+    {
+      id: "microverse",
+      role: "Full Stack Web Development Trainee",
+      company: "Microverse",
+      location: "Remote",
+      start: "Sep 2022",
+      end: "Sep 2023",
+      bullets: [
+        "Built responsive web apps with HTML, CSS, JavaScript and React in a remote, full-time program (1,300+ hours of coding).",
+        "Worked in international teams with remote pair programming, GitHub code reviews and Gitflow.",
+        "Took part in daily stand-ups and mentored junior developers through onboarding.",
       ],
     },
   ],
@@ -192,7 +205,8 @@ const defaultContent = {
       id: "dashen",
       name: "Dashen Bank Super App",
       domain: "Mobile banking",
-      description: "Regression and end-to-end testing with Playwright automation for Ethiopia's first banking super app.",
+      description:
+        "Regression and end-to-end testing, plus Playwright automation for key flows, on Ethiopia's first all-in-one banking super app, built by EagleLion for Dashen Bank.",
       tags: ["Playwright", "E2E", "Regression"],
       link: "https://www.dashensuperapp.com/",
       linkLabel: "Visit the app",
@@ -201,7 +215,8 @@ const defaultContent = {
       id: "starpay",
       name: "Star Pay Payment Gateway",
       domain: "Fintech",
-      description: "Manual, regression and end-to-end testing of transaction flows for a payment gateway.",
+      description:
+        "Manual, regression and end-to-end testing of payment and transaction flows for a leading Ethiopian payment gateway.",
       tags: ["Payments", "E2E", "Manual"],
       link: "https://www.starpayethiopia.com/",
       linkLabel: "Visit site",
@@ -210,7 +225,8 @@ const defaultContent = {
       id: "cbe-connect",
       name: "CBE Connect",
       domain: "Banking · diaspora wallet",
-      description: "Regression testing to keep the app stable and consistent across releases.",
+      description:
+        "Regression testing across releases for Ethiopia's first multicurrency digital wallet, built for Commercial Bank of Ethiopia.",
       tags: ["Regression", "Mobile"],
       link: "https://play.google.com/store/apps/details?id=com.eaglelionsystems.connectethiopia",
       linkLabel: "Google Play",
@@ -317,7 +333,7 @@ const defaultContent = {
   ],
   education: [
     { degree: "BSc, Mechanical Engineering", school: "University of Gondar", years: "2015 – 2021" },
-    { degree: "Full-Stack Web Development Program", school: "Microverse (remote)", years: "2022 – 2023" },
+    { degree: "Full Stack Web Development Certificate", school: "Microverse (remote)", years: "2022 – 2023" },
   ],
 };
 
