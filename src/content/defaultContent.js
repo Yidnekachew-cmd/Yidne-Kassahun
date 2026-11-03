@@ -30,7 +30,7 @@ const defaultContent = {
       "I lead a 17-person QA team at EagleLion System Technology, owning test strategy through to release readiness for banking and fintech products.",
       "I didn't start in software. I trained as a mechanical engineer, retrained through Microverse's full-stack program, and worked as a frontend developer before moving into QA. That path shapes how I test: I think in systems, I can read the code, and I write bug reports developers can act on.",
       "I also build tools that make QA work easier. I built our team's QA dashboard with Claude Code, and I created the test case sheet template the whole team now uses.",
-      "I work as an AI-powered QA automation engineer: I use Claude Code to build and maintain test automation, and I review what it produces. Next, I'm adding Rest Assured to my API automation.",
+      "I work as an AI-powered QA automation engineer: I use Claude Code to build and maintain Playwright UI tests and Rest Assured API tests, and I review what it produces.",
     ],
   },
   principles: [
@@ -84,15 +84,15 @@ const defaultContent = {
     },
     {
       title: "Automate API tests",
-      tool: "Rest Assured",
-      status: "learning",
-      body: "Learning Rest Assured to move API checks from manual Postman runs into automated suites.",
+      tool: "Rest Assured · Claude Code",
+      status: "done",
+      body: "Automate API tests with Rest Assured, using Claude Code to build and maintain the suites, so API checks run automatically instead of by hand in Postman.",
     },
   ],
   skills: [
     { group: "AI-Powered Testing", items: ["Claude Code", "AI-assisted test automation", "GitHub Copilot"] },
     { group: "Test Automation", items: ["Playwright", "JavaScript", "TypeScript", "Page Object Model", "Cucumber (BDD)"] },
-    { group: "API Testing", items: ["Postman", "REST APIs", "API test cases"] },
+    { group: "API Testing & Automation", items: ["Rest Assured", "Postman", "REST APIs", "API test cases"] },
     {
       group: "Testing",
       items: ["Manual", "Functional", "Regression", "Smoke", "End-to-end", "Cross-browser", "Mobile (Android & iOS)"],
@@ -109,7 +109,6 @@ const defaultContent = {
       group: "Dev & Tools",
       items: ["Git & GitHub", "GitHub Actions", "Chrome DevTools", "HTML & CSS", "React"],
     },
-    { group: "Currently Learning", items: ["Rest Assured (API automation)"] },
   ],
   experience: [
     {
